@@ -1,0 +1,110 @@
+body{
+	background-color: #F4E788;
+	font-family: 'comic sans ms';
+	text-align: center;
+    height: 100%;
+}
+
+h1{
+	color: black;
+	text-align: center;
+}
+
+p{
+	font-weight: bold;
+}
+
+hr {
+	border: solid #4CAF50 1px;
+	height: 1px;
+}
+
+#verticalFooter {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+}
+#verticalFooter li {
+	list-style-type: none;
+/*
+	float: left;
+	width: 575px;
+*/
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+/*
+
+.float-end {
+	clear: both;
+}
+*/
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  font-family: 'comic sans ms';
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+#question, #scoreArea {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+#question div {
+    margin: 15px;
+}
+
+#question form {
+    display: flex;
+    align-content: center;
+}
+
+input[type="number"]::placeholder {
+        text-align: center;
+      }
+
+#answer {
+    width: 80px;
+    margin-right: 3px;
+}
+
+

@@ -1,0 +1,104 @@
+<!----                         Multiplication Game                         ---->
+<!----                                © 2021                               ---->
+<!----                  Helena, Matthaeus, Raima, Roxanne                  ---->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Tags description of the title, keywords, as well viewport defined-->
+    <meta charset="utf-8">
+    <meta name="description"
+          content="Multiplication Game, fun way to kill lockdown boredom! Learn and have fun at the same time :)">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Game</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <!-- Scripts -->
+    <script src="scripts/script.js"></script>
+  </head>
+  
+  <body>
+    <header>
+      <!--Logo doubles up as link to homepage -->
+      <a href="index.html" id="">
+        <h1>Multiplication Game</h1>
+		<hr>
+      </a>
+    </header>
+	
+    <!-- start button, show on page load -->
+    <div id="start" style="display:block">
+		<h2>Welcome! Let's get started...</h2>
+		<p>&nbsp;</p>
+		<img src="images/monster.png" width="350">
+		<p></p>
+      <button class="button" onclick="startGame()"><span>Start </span></button>
+    </div>
+	
+    <!-- questions, hide on page load -->
+    <main id="numberSentence" style="display:none">
+	
+		<!-- sound effects -->
+		<audio id="right" preload="auto">
+		<source src="sounds/jump.wav"/>
+		</audio>
+	  
+		<audio id="wrong" preload="auto">
+		<source src="sounds/funnyfail.wav"/>
+		</audio>
+		
+      <div id="mainGame" style="display: block">
+        <div id="scoreArea">
+          <h2>Score: </h2>						<!-- here we should display the score and lifes from JS -->
+          <h2 id="score"></h2>
+        </div>
+        <div>
+          <img id="h1" src="images/heart.png" width="30" style="display: block">
+          <img id="h2" src="images/heart.png" width="30" style="display: block">
+          <img id="h3" src="images/heart.png" width="30" style="display: block">
+        </div>
+        <div id="question">
+          <div><h2 id="factor1"></h2></div>
+          <div><h2 id="operation">x</h2></div>
+          <div><h2 id="factor2"></h2></div>
+          <div><h2>=</h2></div>
+          <!-- form to put the answer in -->
+          <form onsubmit="return false;">
+            <input type="number" id="answer" placeholder="Answer" required>
+            <input type="submit" value="GO!" onclick="processAnswer()" >
+          </form>
+        </div>
+      </div>
+      <!-- success/game finished sign -->
+      <figure id="success" style="display: none">
+        <img src="images/thumbsUp.png" width="300">
+        <p> Well done! </p>
+      </figure>
+      <!-- gameover sign -->
+      <figure id="gameover" style="display: none">
+        <img src="images/gameOver.png" width="300">
+        <p> Please try again! </p>
+      </figure>
+	</main>
+	
+    <!-- Footer includes links to GitHub repository and member Discord names -->
+    <footer>
+		<p>&nbsp;</p>
+		<hr>
+		  <ul id="verticalFooter">
+			<li><a href="">GitHub</a></li>
+			<li>
+				<ul class="members">
+				  <li>MatthaeusRagg#5796</li>
+				  <li>raceOfSirens#5170</li>
+				  <li>amiar451#2621</li>
+				  <li>helena#4987</li>
+				</ul>
+			</li>
+			<li>&#169; 2021</li>
+		  </ul>
+    </footer>
+	
+  </body>
+</html>
